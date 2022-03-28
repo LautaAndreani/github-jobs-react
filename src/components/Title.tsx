@@ -1,4 +1,4 @@
-import { Text, Box } from "@chakra-ui/react";
+import { Text, Box, Badge } from "@chakra-ui/react";
 
 export default function Title() {
   return (
@@ -6,7 +6,7 @@ export default function Title() {
       <Box as="span" fontWeight={600}>
         Github
       </Box>{" "}
-      Jobs
+      Jobs <Badge colorScheme="green">Beta</Badge>
     </Text>
   );
 }
