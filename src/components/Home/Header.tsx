@@ -1,11 +1,12 @@
-import { Stack, Input, InputGroup, InputLeftElement, Button } from "@chakra-ui/react";
+import { Stack, Input, InputGroup, InputLeftElement, Button, Image } from "@chakra-ui/react";
 import { MdWorkOutline } from "react-icons/md";
 import { HeaderTypes } from "../../types";
+import background from "../../assets/bg.png";
 
 export default function Header({ searchFilter }: HeaderTypes) {
   return (
     <Stack direction="column">
-      <Stack position="relative" bgImage="url('/src/assets/bg.png')" bgPosition="center" bgSize="cover" borderRadius="md">
+      <Stack position="relative" bgImage={background} bgPosition="center" bgSize="cover" borderRadius="md">
         <Stack margin="3rem auto" direction="row" bg="brand.bg" minH="3rem" width="60%" alignItems="center" padding="30px 10px" borderRadius="md">
           <InputGroup>
             <InputLeftElement pointerEvents="none" children={<MdWorkOutline />} color="brand.placeholder" />
