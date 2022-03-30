@@ -6,16 +6,16 @@ export default function Paginator({ handleMoreJobs, handleLessJobs, indexPaginat
   return (
     <Stack direction="row" paddingTop="1.2rem" justifyContent="flex-end">
       {indexPaginator <= 0 ? (
-        <Button colorScheme="blue" onClick={handleMoreJobs}>
+        <Button type="button" name="next-page" colorScheme="blue" onClick={handleMoreJobs}>
           <Icon as={MdNavigateNext} />
         </Button>
       ) : (
         <>
-          <Button colorScheme="blue" onClick={handleLessJobs}>
+          <Button type="button" name="next-page" colorScheme="blue" onClick={handleLessJobs}>
             <Icon as={MdNavigateNext} transform="rotate(180deg)" />
           </Button>
           {indexPaginator >= 12 ? null : (
-            <Button colorScheme="blue" onClick={handleMoreJobs}>
+            <Button type="button" name="next-page" colorScheme="blue" onClick={handleMoreJobs}>
               <Icon as={MdNavigateNext} />
             </Button>
           )}

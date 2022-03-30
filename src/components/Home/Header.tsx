@@ -12,7 +12,7 @@ export default function Header({ searchFilter }: HeaderTypes) {
             <InputLeftElement pointerEvents="none" children={<MdWorkOutline />} color="brand.placeholder" />
             <Input variant="outline" type="text" placeholder="Title, companies, expertise or benefits" _placeholder={{ color: "brand.placeholder" }} onChange={(e) => searchFilter(e.target.value)} />
           </InputGroup>
-          <Button width={{ base: "full", md: "20%" }} color="white" colorScheme="blue" fontWeight={500} padding="12px 40px" size="2xl">
+          <Button type="button" name="search" width={{ base: "full", md: "20%" }} color="white" colorScheme="blue" fontWeight={500} padding="12px 40px" size="2xl">
             Search
           </Button>
         </Stack>
