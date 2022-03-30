@@ -11,11 +11,11 @@ export default function RightSide({ filterJob }: JobProps) {
     <>
       <Stack direction="column" color="brand.text">
         <Stack>
-          <HStack>
+          <HStack flexWrap="wrap">
             <Heading as="h1" marginRight={2}>
               {filterJob?.position}
             </Heading>
-            <BadgeUI marginLeft="2rem">{filterJob?.type}</BadgeUI>
+            <BadgeUI marginLeft="1rem">{filterJob?.type}</BadgeUI>
           </HStack>
           <Stack direction="row" alignItems="center" color="brand.placeholder">
             <Icon as={MdSchedule} />

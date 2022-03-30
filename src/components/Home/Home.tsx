@@ -15,7 +15,7 @@ const Home = ({ jobs, cards, setCards }: any) => {
     setCards(jobs.filter((card: any) => card.position.toLowerCase().includes(value.toLowerCase()) || card.company.toLowerCase().includes(value.toLowerCase())));
   };
   return (
-    <Box width="90%" margin="0 auto" p={10}>
+    <Box width={{ base: "100%", md: "90%" }} margin="0 auto" p={10}>
       <Header searchFilter={searchFilter} />
       <MotionBoxes>
         <Grid templateColumns={{ md: "repeat(2,1fr)", lg: "repeat(3,1fr)" }}>

@@ -12,7 +12,7 @@ export default function JobDescription({ jobs }: Props) {
   return (
     <>
       <MotionBoxes>
-        <Box width="90%" margin="0 auto" p={10}>
+        <Box width={{ base: "100%", md: "90%" }} margin="0 auto" p={10}>
           <Grid gap={5} templateColumns={{ md: "repeat(2,1fr)", lg: "repeat(3,1fr)" }}>
             <GridItem colStart={1}>
               <LeftSide filterJob={filterJob} />

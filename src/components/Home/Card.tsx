@@ -2,7 +2,7 @@ import { MdLanguage, MdSchedule } from "react-icons/md";
 import { Job } from "../../types";
 import MotionBoxes from "../MotionBox";
 import BadgeUI from "../ui/BadgeUI";
-import errorImage from "../../assets/not-found.png";
+import errorImage from "../../assets/not-found.webp";
 
 import { Stack, Image, Box, Text, Badge, Icon } from "@chakra-ui/react";
 
@@ -14,7 +14,7 @@ const Card = ({ job }: cardProp) => {
   return (
     <>
       <MotionBoxes>
-        <Stack direction="row" alignItems="center" marginTop="2rem" p={5} height="15.5vh" color="brand.text" boxShadow="0px 2px 4px rgba(0, 0, 0, 0.05)" borderRadius="md" bg="white" w="100%">
+        <Stack direction="row" alignItems="center" marginTop="2rem" p={5} color="brand.text" boxShadow="0px 2px 4px rgba(0, 0, 0, 0.05)" borderRadius="md" bg="white" w="100%">
           <Box width="7rem" objectFit="cover">
             <Image src={job.company_img ? job.company_img : errorImage} alt={job.company} w="100%" height="100%" objectFit="cover" borderRadius="md" />
           </Box>
@@ -25,7 +25,7 @@ const Card = ({ job }: cardProp) => {
             <Text as="h3" fontSize="1.3rem" fontWeight={400}>
               {job.position}
             </Text>
-            <Stack direction="row" alignItems="center" justifyContent="space-between">
+            <Stack direction={{ base: "column", md: "row" }} alignItems={{ base: "flex-start", md: "center" }} justifyContent="space-between">
               <BadgeUI>{job.type}</BadgeUI>
               <Stack direction="row" color="brand.placeholder">
                 <Stack direction="row" alignItems="center">
