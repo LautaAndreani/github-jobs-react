@@ -27,7 +27,7 @@ export default function RightSide({ filterJob }: JobProps) {
             <Image src={filterJob?.company_img ? filterJob?.company_img : "/src/assets/not-found.png"} alt={filterJob?.company} w="100%" height="100%" objectFit="cover" borderRadius="md" />
           </Box>
           <Stack direction="column" justifyContent="space-evenly">
-            <Text as="h3" fontSize="1.4rem" fontWeight={600}>
+            <Text as="p" fontSize="1.4rem" fontWeight={600}>
               {filterJob?.company}
             </Text>
             <Stack direction="row" alignItems="center" color="brand.placeholder">

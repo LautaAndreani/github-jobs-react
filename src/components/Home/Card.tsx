@@ -22,7 +22,7 @@ const Card = ({ job }: cardProp) => {
             <Text as="small" letterSpacing={0.5} fontWeight={600}>
               {job.company}
             </Text>
-            <Text as="h3" fontSize="1.3rem" fontWeight={400}>
+            <Text as="p" fontSize="1.3rem" fontWeight={400}>
               {job.position}
             </Text>
             <Stack direction={{ base: "column", md: "row" }} alignItems={{ base: "flex-start", md: "center" }} justifyContent="space-between">
