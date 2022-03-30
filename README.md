@@ -29,3 +29,4 @@ Challenge by <a href="https://devchallenges.io/challenges/TtUjDt19eIHxNQ4n5jps">
   - ReactJs & React-router-dom
   - ChakraUi
   - CSS grids
+  - Vercel to deploy
