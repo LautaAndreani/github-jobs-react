@@ -1,12 +1,12 @@
 import { Stack, Checkbox, Text, InputGroup, InputLeftElement, Input, RadioGroup, Radio, CheckboxGroup } from "@chakra-ui/react";
+import { useState } from "react";
 import { MdLanguage } from "react-icons/md";
 import { FilterProps } from "../../types";
 
-export default function Filter({ jobs, filterType }: FilterProps) {
+export default function Filter({ jobs, filterType, locationFilter }: FilterProps) {
   //remove repeated items
   // const type = [...new Set(jobs.map((typ: any) => typ.type))];
-  const categories = [...new Set(jobs.map((job: any) => job.location))];
-
+  const categories = [...new Set(jobs.map((job: any) => job.location)), "Todos"];
   return (
     <Stack margin="2rem 0" spacing={5} fontFamily="Poppins" position="sticky" top="10">
       <CheckboxGroup onChange={(e) => filterType(e.toString())}>
@@ -30,9 +30,9 @@ export default function Filter({ jobs, filterType }: FilterProps) {
           _placeholder={{ color: "brand.placeholder" }}
         />
       </InputGroup>
-      <RadioGroup>
+      <RadioGroup defaultValue="Todos" onChange={(val) => locationFilter(val)}>
         <Stack direction="column">
-          {categories.map((res: any, i: number) => (
+          {categories.reverse().map((res: any, i: number) => (
             <Radio key={i} value={res}>
               {res}
             </Radio>

@@ -17,6 +17,7 @@ export interface Props {
 export interface FilterProps {
   jobs: Job[];
   filterType: Function;
+  locationFilter: Function;
 }
 
 export interface PaginatorProps {
